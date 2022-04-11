@@ -35,7 +35,8 @@
                 android:layout_marginEnd="22dp"
                 android:textAlignment="textEnd"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="secDisplayClick"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mainDisplay"

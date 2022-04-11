@@ -12,7 +12,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class MainActivity extends AppCompatActivity {
     private TextInputEditText mainDisplay;
     private TextView secDisplay;
-
+    private String userExpression;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,8 +121,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
     public void plusBtnClick(View view) {
         setMainDisplay("+",1);
     }
@@ -138,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
     public void divideBtnClick(View view) {
         setMainDisplay("÷",1);
     }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void cBtnClick(View view) {
         String content = mainDisplay.getText().toString();
@@ -161,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void equalBtnClick(View view) {
-        String userExpression = mainDisplay.getText().toString();
+        userExpression = mainDisplay.getText().toString();
         if (!userExpression.isEmpty()){
             userExpression = userExpression.replace('÷', '/').replace('×', '*');
             Expression expression = new Expression(userExpression);
@@ -170,5 +166,12 @@ public class MainActivity extends AppCompatActivity {
             mainDisplay.setSelection(result.length());
             secDisplay.setText(String.valueOf(userExpression));
         }
+    }
+
+    public void secDisplayClick(View view) {
+       secDisplay.setText("");
+       mainDisplay.setText(userExpression);
+       mainDisplay.setSelection(userExpression.length());
+
     }
 }
