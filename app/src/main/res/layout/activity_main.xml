@@ -31,10 +31,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/mainDisplay"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
                 android:textAlignment="textEnd"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mainDisplay"
@@ -42,14 +43,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_margin="5dp"
                 android:padding="1dp"
                 android:text="0"
                 android:textAlignment="textEnd"
-                android:textSize="50dp" />
+                android:textSize="45dp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
