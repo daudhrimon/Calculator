@@ -19,9 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainDisplay = findViewById(R.id.mainDisplay);
-        secDisplay = findViewById(R.id.secDisplay);
-        mainDisplay.setShowSoftInputOnFocus(false);
+        // initialize View
+        initialize();
     }
 
     // Set Display Method
@@ -38,7 +37,45 @@ public class MainActivity extends AppCompatActivity {
         mainDisplay.setSelection(cursorPosition + currentKey.length());
     }
 
-    // All Buttons OnClick Methods
+    // All OnClick Methods
+
+    public void secDisplayClick(View view) {
+        secDisplay.setText("");
+        mainDisplay.setText(userExpression);
+        mainDisplay.setSelection(userExpression.length());
+    }
+
+    public void cBtnClick(View view) {
+        String content = mainDisplay.getText().toString();
+        if (!content.equals("0")){
+            int cursorPosition = mainDisplay.getSelectionStart();
+            int textLength = mainDisplay.getText().length();
+            if (cursorPosition!=0 && textLength!=0){
+                SpannableStringBuilder selection = (SpannableStringBuilder) mainDisplay.getText();
+                selection.replace(cursorPosition-1,cursorPosition,"");
+                mainDisplay.setText(selection);
+                mainDisplay.setSelection(cursorPosition-1);
+            }
+        }
+    }
+
+    public void acBtnClick(View view) {
+        mainDisplay.setText("0");
+        secDisplay.setText("");
+    }
+
+    public void equalBtnClick(View view) {
+        userExpression = mainDisplay.getText().toString();
+        if (!userExpression.isEmpty()){
+            userExpression = userExpression.replace('÷', '/').replace('×', '*');
+            Expression expression = new Expression(userExpression);
+            String result = String.valueOf(expression.calculate());   // Library Link: https://mathparser.org/mxparser-downloads/
+            result = result.replace('/','÷').replace('*','×');
+            mainDisplay.setText(result);
+            mainDisplay.setSelection(result.length());
+            secDisplay.setText(String.valueOf(userExpression));
+        }
+    }
 
     public void zeroBtnClick(View view) {
         setMainDisplay("0");
@@ -128,42 +165,11 @@ public class MainActivity extends AppCompatActivity {
         setMainDisplay("÷");
     }
 
-    public void cBtnClick(View view) {
-        String content = mainDisplay.getText().toString();
-        if (!content.equals("0")){
-            int cursorPosition = mainDisplay.getSelectionStart();
-            int textLength = mainDisplay.getText().length();
-            if (cursorPosition!=0 && textLength!=0){
-                SpannableStringBuilder selection = (SpannableStringBuilder) mainDisplay.getText();
-                selection.replace(cursorPosition-1,cursorPosition,"");
-                mainDisplay.setText(selection);
-                mainDisplay.setSelection(cursorPosition-1);
-            }
-        }
+    // initialize Method
+    private void initialize() {
+        mainDisplay = findViewById(R.id.mainDisplay);
+        mainDisplay.setShowSoftInputOnFocus(false);
+        secDisplay = findViewById(R.id.secDisplay);
     }
 
-    public void acBtnClick(View view) {
-        mainDisplay.setText("0");
-        secDisplay.setText("");
-    }
-
-    public void equalBtnClick(View view) {
-        userExpression = mainDisplay.getText().toString();
-        if (!userExpression.isEmpty()){
-            userExpression = userExpression.replace('÷', '/').replace('×', '*');
-            Expression expression = new Expression(userExpression);
-            String result = String.valueOf(expression.calculate());   // Library Link: https://mathparser.org/mxparser-downloads/
-            result = result.replace('/','÷').replace('*','×');
-            mainDisplay.setText(result);
-            mainDisplay.setSelection(result.length());
-            secDisplay.setText(String.valueOf(userExpression));
-        }
-    }
-
-    public void secDisplayClick(View view) {
-       secDisplay.setText("");
-       mainDisplay.setText(userExpression);
-       mainDisplay.setSelection(userExpression.length());
-
-    }
 }
