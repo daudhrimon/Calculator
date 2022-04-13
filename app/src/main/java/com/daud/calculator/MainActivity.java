@@ -55,12 +55,21 @@ public class MainActivity extends AppCompatActivity {
                 selection.replace(cursorPosition-1,cursorPosition,"");
                 mainDisplay.setText(selection);
                 mainDisplay.setSelection(cursorPosition-1);
+            }else if (textLength==0){
+                secDisplay.setText("");
+                mainDisplay.setText("0");
+                mainDisplay.setSelection(1);
             }
+        }else{
+            secDisplay.setText("");
+            mainDisplay.setText("0");
+            mainDisplay.setSelection(1);
         }
     }
 
     public void acBtnClick(View view) {
         mainDisplay.setText("0");
+        mainDisplay.setSelection(1);
         secDisplay.setText("");
     }
 
@@ -73,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             result = result.replace('/','÷').replace('*','×');
             mainDisplay.setText(result);
             mainDisplay.setSelection(result.length());
+            userExpression = userExpression.replace('*','×').replace('/','÷');
             secDisplay.setText(String.valueOf(userExpression));
         }
     }
