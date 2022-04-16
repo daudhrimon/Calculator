@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.*; // Library //
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText mainDisplay;
     private TextView secDisplay;
     private String userExpression;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void secDisplayClick(View view) {
         secDisplay.setText("");
-        mainDisplay.setText(userExpression);
-        mainDisplay.setSelection(userExpression.length());
+        if (userExpression!=null && !userExpression.equals("")){
+            mainDisplay.setText(userExpression);
+            mainDisplay.setSelection(userExpression.length());
+            userExpression = "";
+        }
     }
 
     public void cBtnClick(View view) {
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             secDisplay.setText("");
             mainDisplay.setText("0");
             mainDisplay.setSelection(1);
+            userExpression = "";
         }
     }
 
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         mainDisplay.setText("0");
         mainDisplay.setSelection(1);
         secDisplay.setText("");
+        userExpression = "";
     }
 
     public void equalBtnClick(View view) {
@@ -181,5 +188,4 @@ public class MainActivity extends AppCompatActivity {
         mainDisplay.setShowSoftInputOnFocus(false);
         secDisplay = findViewById(R.id.secDisplay);
     }
-
 }

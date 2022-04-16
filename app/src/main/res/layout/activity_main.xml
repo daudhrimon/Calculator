@@ -18,8 +18,8 @@
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="30dp"
         app:neumorph_shapeType="pressed"
-        app:neumorph_shadowColorLight="@color/shadow_color"
-        app:neumorph_shadowColorDark="@color/shadow_color">
+        app:neumorph_shadowColorLight="@color/dark_shadow"
+        app:neumorph_shadowColorDark="@color/dark_shadow">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,10 +33,11 @@
                 android:layout_above="@+id/mainDisplay"
                 android:layout_marginStart="22dp"
                 android:layout_marginEnd="22dp"
+                android:onClick="secDisplayClick"
                 android:textAlignment="textEnd"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:onClick="secDisplayClick"/>
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mainDisplay"
@@ -82,12 +83,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="e"
                 android:textAllCaps="false"
-                android:textSize="22dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="24dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="eBtnClick" />
 
             <soup.neumorphism.NeumorphButton
@@ -95,12 +98,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="π"
                 android:textAllCaps="false"
-                android:textSize="20dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="23dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="pieBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -108,12 +113,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="sin"
                 android:textAllCaps="false"
-                android:textSize="20dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="22dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="sinBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -121,12 +128,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="deg"
                 android:textAllCaps="false"
-                android:textSize="20dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="22dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="degBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -134,12 +143,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="√"
                 android:textAllCaps="false"
-                android:textSize="20dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="22dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="rootBtnClick" />
 
         </LinearLayout>
@@ -158,13 +169,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="AC"
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="acBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -172,12 +185,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="C"
                 android:textAllCaps="false"
-                android:textSize="22dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="cBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -185,12 +200,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="("
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="bStartBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -198,12 +215,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text=")"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="bEndBtnClick" />
 
 
@@ -225,12 +244,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="7"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="sevenBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -238,12 +259,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="8"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="eightBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -251,12 +274,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="9"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="nineBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -264,14 +289,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="÷"
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="40dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="divideBtnClick"/>
 
         </LinearLayout>
@@ -287,16 +313,17 @@
 
             <soup.neumorphism.NeumorphButton
                 android:id="@+id/fourBtn"
-                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="4"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="fourBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -304,26 +331,29 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="5"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="fiveBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
                 android:id="@+id/sixBtn"
-                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="6"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="sixBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -331,15 +361,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
-                android:padding="5dp"
                 android:text="×"
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="40dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="intoBtnClick"/>
 
         </LinearLayout>
@@ -359,11 +389,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                style="@style/Widget.Neumorph.Button"
                 android:text="1"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="oneBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -371,12 +403,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="2"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="twoBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -384,12 +418,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="3"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="threeBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -397,14 +433,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="−"
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="35dp"
+                android:textSize="40dp"
+                android:padding="0dp"
                 android:textStyle="bold"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="minusBtnClick"/>
 
         </LinearLayout>
@@ -424,12 +462,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="0"
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="35dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="zeroBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -437,12 +477,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="."
                 android:textAllCaps="false"
-                android:textSize="25dp"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                android:textSize="40dp"
+                android:padding="0dp"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="pointBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -450,14 +492,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="="
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="35dp"
+                android:textSize="40dp"
+                android:padding="0dp"
                 android:textStyle="bold"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="equalBtnClick"/>
 
             <soup.neumorphism.NeumorphButton
@@ -465,14 +509,16 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                style="@style/Widget.Neumorph.Button"
                 android:gravity="center"
                 android:text="+"
                 android:textAllCaps="false"
                 android:textColor="#FF7F50"
-                android:textSize="35dp"
+                android:textSize="40dp"
+                android:padding="0dp"
                 android:textStyle="bold"
-                app:neumorph_shadowColorLight="@color/shadow_color"
-                app:neumorph_shadowColorDark="@color/orange"
+                app:neumorph_shadowColorLight="@color/dark_shadow"
+                app:neumorph_shadowColorDark="@color/light_shadow"
                 android:onClick="plusBtnClick"/>
 
         </LinearLayout>
